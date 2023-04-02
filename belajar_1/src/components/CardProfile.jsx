@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Button from "./Button";
+import Product from "./Product";
 
 function CardProfile() {
     const user = {
@@ -20,6 +22,9 @@ function CardProfile() {
     return (<>
         {isLoggedIn ? (
             <>
+                <div className="my-3">
+                    <h3 className=" drop-shadow-lg shadow-green-400 text-3xl">This is About Card Profile</h3>
+                </div>
                 <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-4 mx-auto" >
                     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={user.img} alt="" />
                     <div class="flex flex-col justify-between p-4 leading-normal">
@@ -30,9 +35,10 @@ function CardProfile() {
                 <div>
                     <button
                         onClick={handleLogout}
-                        className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mx-auto">Logout
+                        className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mx-auto mb-4">Close
                     </button>
                 </div>
+
 
             </>
         ) : (
@@ -40,8 +46,10 @@ function CardProfile() {
                 <div>
                     <button
                         onClick={handleLogin}
-                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-auto">Login</button>
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg my-4">Click Me
+                    </button>
                 </div>
+                <Product />
             </>
 
         )}
