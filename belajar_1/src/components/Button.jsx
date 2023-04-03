@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function Button({ count, onClick }) {
+function Button(props) {
     const [click, setClick] = useState(false);
 
     function handleClik() {
@@ -14,9 +14,16 @@ function Button({ count, onClick }) {
     return (<>
         {click ? (
             <>
-                <h3>Counters that update together</h3>
-                <button onClick={onClick}>
-                    Clicked {count} times
+                <h3 className="text-xl font-mono font-bold text-gray-700 my-3">Counters that update together</h3>
+                <button
+                    className="bg-green-500 mx-auto p-3 rounded-md text-cyan-950"
+                    onClick={props.handleCount}>
+                    Clicked <b className="font-bold p-2 bg-gray-400 rounded-full text-black">{props.count}</b> times
+                </button>
+                <button
+                    className="bg-sky-900 mx-auto p-3 mt-3 rounded-md text-white"
+                    onClick={props.handleCount}>
+                    Clicked <b className="font-bold p-2 bg-gray-400 rounded-full text-black">{props.count}</b> times
                 </button>
                 <button
                     onClick={handleClose}

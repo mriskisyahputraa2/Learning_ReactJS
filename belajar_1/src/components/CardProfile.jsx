@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Button from "./Button";
 import Product from "./Product";
 
 function CardProfile() {

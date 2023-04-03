@@ -3,12 +3,16 @@ import Button from "./Button";
 
 function Product() {
     const [click, setClick] = useState(false);
-
+    const [count, setCount] = useState(0);
     const products = [
         { id: 1, title: 'Apple' },
         { id: 2, title: 'Samsung' },
         { id: 3, title: 'Oppo' },
     ]
+
+    const handleCount = () => {
+        setCount(count + 1);
+    }
 
     const handleClick = () => {
         setClick(true);
@@ -46,9 +50,9 @@ function Product() {
                     onClick={handleClick}
                     className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg mx-auto">Product
                 </button>
-                <Button />
             </>
         )}
+        <Button handleCount={handleCount} count={count} />
     </>
     )
 }
