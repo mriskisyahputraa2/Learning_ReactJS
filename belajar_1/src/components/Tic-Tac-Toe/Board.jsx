@@ -1,18 +1,40 @@
 import { useState } from "react";
 import Squere from "./Squere";
+import WhoWinner from "./WhoWinner";
 
 export default function Board() {
     const [squeres, setSqueres] = useState(Array(9).fill(null))
+    const [xIsNext, setXIsNext] = useState(true);
 
     const handleClick = (i) => {
+        if (WhoWinner(squeres) || squeres[i]) {
+            return;
+        }
+
         const nextSqueres = squeres.slice();
-        nextSqueres[i] = "X";
+        if (xIsNext) {
+            nextSqueres[i] = "X";
+        } else {
+            nextSqueres[i] = "O";
+        }
         setSqueres(nextSqueres);
+        setXIsNext(!xIsNext);
+    }
+
+
+    const winner = WhoWinner(squeres);
+    let status;
+    if (winner) {
+        status = 'Winner : ' + winner;
+    } else {
+        status = 'Next Player: ' + (xIsNext ? 'X' : 'O');
     }
 
     return (<>
+        <hr className="mb-2" />
         <h1 className="text-3xl font-bold mb-3">Tic Tac Toe</h1>
-        <div className="flex justify-center">
+        <div className="my-4 font-bold text-xl text-rose-800">{status}</div>
+        <div className="flex justify-center ">
             <div>
                 <Squere value={squeres[0]} onSquareClick={() => handleClick(0)} />
                 <Squere value={squeres[1]} onSquareClick={() => handleClick(1)} />
