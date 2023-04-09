@@ -1,5 +1,4 @@
-
-function WhoWinner(squares) {
+function CalculateWinner(squares) {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -18,4 +17,4 @@ function WhoWinner(squares) {
     }
     return null;
 }
-export default WhoWinner;
+export default CalculateWinner;

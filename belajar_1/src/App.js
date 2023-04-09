@@ -1,6 +1,5 @@
 import CardProfile from './components/CardProfile';
 import MyApp from './components/MyApp';
-import Board from './components/Tic-Tac-Toe/Board';
 import './index.css';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
     <div className=''>
       <MyApp/>
       <CardProfile/>
-      <Board/>
+      
     </div>
   </div>
   </>
