@@ -1,4 +1,5 @@
 import Clock from "./components/Clock";
+import Example from "./components/ConRender/Example";
 import Profil from "./components/Profil";
 
 function App() {
@@ -6,9 +7,12 @@ function App() {
   const name = "Muhammad Rizki Syahputra";
   return (
     <>
-      <div className="min-h-screen border-solid border-2 border-black w-[600px] h-[400px] text-center rounded mx-auto">
+      <div className=" min-h-[1024px] border-solid border-2 border-black w-[600px] text-center rounded mx-auto">
         <Profil name={name} />
         <Clock />
+        <div className="flex justify-center ">
+          <Example />
+        </div>
       </div>
     </>
   );

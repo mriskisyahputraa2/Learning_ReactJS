@@ -16,7 +16,7 @@ function Profil({ name }) {
   };
   return (
     <>
-      <div className="flex justify-center mx-auto mt-3 ">
+      <div className="flex justify-center mx-auto mt-3">
         <div>
           <h1 className="text-3xl my-4 font-bold">{name}</h1>
           <img
