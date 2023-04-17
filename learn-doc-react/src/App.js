@@ -1,5 +1,5 @@
 import Clock from "./components/Clock";
-import Example from "./components/ConRender/Example";
+import Utama from "./components/ConRender/Utama";
 import Profil from "./components/Profil";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Profil name={name} />
         <Clock />
         <div className="flex justify-center ">
-          <Example />
+          <Utama />
         </div>
       </div>
     </>
