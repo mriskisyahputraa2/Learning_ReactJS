@@ -1,16 +1,16 @@
 import DrinkList from "./components/ConRender/DrinkList";
 import Utama from "./components/ConRender/Utama";
 import Profil from "./components/Profil";
+import Employee from "./components/RenderList/Employee";
 
 function App() {
-  // melakukan pass data dan di tangkap menggunakan props.
-  const name = "Muhammad Rizki Syahputra";
   return (
     <>
-      <div className=" min-h-[1024px] ">
-        <Profil name={name} />
+      <div className="min-h-full">
+        <Profil />
         <Utama />
         <DrinkList />
+        <Employee />
       </div>
     </>
   );

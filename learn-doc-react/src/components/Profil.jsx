@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-function Profil({ name }) {
-  //   const name = "Muhammad Rizki Syahputra";
+function Profil() {
+  const name = "Muhammad Rizki Syahputra";
   const saudara = "1 (Tunggal:)";
   const umur = 17;
   const deskripsi = "Harapan Orang Tua";
@@ -48,7 +48,7 @@ function Profil({ name }) {
           <h1 className=" text-3xl my-4 font-bold">{name}</h1>
           <img
             className=" rounded-lg drop-shadow-md my-2"
-            src={process.env.PUBLIC_URL + "/imges/me.jpg"}
+            src={process.env.PUBLIC_URL + "/img/me.jpg"}
             alt={name}
             width={200}
             height={200}
