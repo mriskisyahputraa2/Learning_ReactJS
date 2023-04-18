@@ -1,4 +1,4 @@
-import Clock from "./components/Clock";
+import DrinkList from "./components/ConRender/DrinkList";
 import Utama from "./components/ConRender/Utama";
 import Profil from "./components/Profil";
 
@@ -7,12 +7,10 @@ function App() {
   const name = "Muhammad Rizki Syahputra";
   return (
     <>
-      <div className=" min-h-[1024px] border-solid border-2 border-black w-[600px] text-center rounded mx-auto">
+      <div className=" min-h-[1024px] ">
         <Profil name={name} />
-        <Clock />
-        <div className="flex justify-center ">
-          <Utama />
-        </div>
+        <Utama />
+        <DrinkList />
       </div>
     </>
   );

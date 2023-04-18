@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
+
 function Profil({ name }) {
   //   const name = "Muhammad Rizki Syahputra";
-  const saudara = "Tunggal:)";
+  const saudara = "1 (Tunggal:)";
   const umur = 17;
   const deskripsi = "Harapan Orang Tua";
   const today = new Date();
@@ -14,13 +16,38 @@ function Profil({ name }) {
       year: "numeric",
     }).format(date);
   };
+
+
+  // membuat state dengan waktu saat ini
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // proses membuat detik
+  useEffect(() => {
+    // menjalankan fungsi detik dengan setInterval yang disimpan dalam v-interValid
+    const interValId = setInterval(() => {
+      // data setInterval sudah jalan selama satu detik, trs di ubah menjadi waktu sekarang
+      setCurrentTime(new Date());
+    }, 1000); // 1 detik
+
+    // dan bersihkan(unmount) detiknya dengan clearInterval
+    return () => clearInterval(interValId);
+  }, []);
+
+  // mengubah objek wakt menjadi format jam yang sesuai
+  function formatTime(date) {
+    const hours = date.getHours().toString().padStart(2, 0);
+    const minutes = date.getMinutes().toString().padStart(2, 0);
+    const seconds = date.getSeconds().toString().padStart(2, 0);
+
+    return `${hours}:${minutes}:${seconds}`;
+  }
   return (
     <>
-      <div className="flex justify-center mx-auto mt-3">
-        <div>
-          <h1 className="text-3xl my-4 font-bold">{name}</h1>
+      <div className="mt-3 w-[450px] h-auto border-2 border-black relative">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className=" text-3xl my-4 font-bold">{name}</h1>
           <img
-            className="mx-auto rounded-lg drop-shadow-md my-2"
+            className=" rounded-lg drop-shadow-md my-2"
             src={process.env.PUBLIC_URL + "/imges/me.jpg"}
             alt={name}
             width={200}
@@ -28,7 +55,7 @@ function Profil({ name }) {
           />
           <ul>
             <li>
-              <b>Saudara: </b>
+              <b>Jumlah Saudara: </b>
               {saudara}
             </li>
             <li>
@@ -43,6 +70,12 @@ function Profil({ name }) {
               {formatDate(today)}
             </li>
           </ul>
+          <div className="text-2xl">
+            <p className="text-red-500">
+              <b className="text-black">JAM: </b>
+              {formatTime(currentTime)}
+            </p>
+          </div>
         </div>
       </div>
     </>
