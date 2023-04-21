@@ -15,11 +15,11 @@ function Employee() {
             deskripsi: 'Seorang FrontEnd Developer dalam semua bidang'
         },
     ]
-    const sofwareEngginer = people.filter(person =>
+    const programmer = people.filter(person =>
         person.profesi === 'Sofware Engginer'
     );
 
-    const employeeList = sofwareEngginer.map((person) => (
+    const employeeList = programmer.map((person) => (
         <div className="flex items-center mb-4" key={person.id}>
             <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover" />
             <div className="ml-4">

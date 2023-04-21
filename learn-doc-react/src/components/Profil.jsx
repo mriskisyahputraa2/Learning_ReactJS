@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Profil() {
   const name = "Muhammad Rizki Syahputra";
@@ -6,6 +7,8 @@ function Profil() {
   const umur = 17;
   const deskripsi = "Harapan Orang Tua";
   const today = new Date();
+
+  const navigate = useNavigate();
 
   //   formate Date
   const formatDate = (date) => {
@@ -76,6 +79,8 @@ function Profil() {
               {formatTime(currentTime)}
             </p>
           </div>
+
+          <button onClick={() => navigate('/item-list')}>Go to Item-List</button>
         </div>
       </div>
     </>
