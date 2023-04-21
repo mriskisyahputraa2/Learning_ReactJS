@@ -3,11 +3,11 @@ import { Fragment } from "react"
 function Employees({ people }) {
     return <>
 
-        <div className="flex flex-col container mx-auto border-2 border-white w-[900px] p-2 bg-slate-700 text-white">
+        <div className="flex flex-col container mx-auto border-2 border-white w-[900px] p-2 bg-slate-900 text-white">
             {people.map((person, index) => {
                 return (
                     <Fragment key={index}>
-                        <div className="flex items-center my-5">
+                        <div className="flex items-center my-4">
                             <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover" />
                             <div className="ml-4">
                                 <h2 className="font-bold uppercase">{person.name}</h2>

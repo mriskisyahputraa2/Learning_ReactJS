@@ -27,7 +27,6 @@ function ItemLists({ name, status }) {
 
                 {/* Use Conditional Assigning (penugasan) to a variabel  */}
                 <div>
-
                     <b className="font-light text-blue-500 ">Use Assigning(penugasan): {itemContent}</b>
                 </div >
             </div >

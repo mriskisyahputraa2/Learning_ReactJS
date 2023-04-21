@@ -45,7 +45,7 @@ function Employee() {
 
 
     return <>
-        <div className="bg-slate-700">
+        <div className="bg-slate-800">
             <Employees people={people} />
         </div>
     </>
