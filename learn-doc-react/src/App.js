@@ -1,6 +1,6 @@
 import NotFound from "./Pages/NotFound";
-import DrinkList from "./components/ConRender/DrinkList";
-import Utama from "./components/ConRender/Utama";
+import Drink from "./components/ConRender/Drink";
+import Item from "./components/ConRender/Item";
 import Profil from "./components/Profil";
 import Employee from "./components/RenderList/Employee";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -12,8 +12,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Profil />} />
-            <Route path="/item-list" element={<Utama />} />
-            <Route path="/drink" element={<DrinkList />} />
+            <Route path="/item-list" element={<Item />} />
+            <Route path="/drink-list" element={<Drink />} />
             <Route path="/employee" element={<Employee />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

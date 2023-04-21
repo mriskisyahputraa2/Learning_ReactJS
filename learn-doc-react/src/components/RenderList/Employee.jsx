@@ -1,11 +1,13 @@
+import Employees from "../../Pages/Employees";
+
 function Employee() {
     const people = [
         {
             id: 0,
-            name: 'Riski',
+            name: 'Muhammad Rizki Syahputra',
             profesi: 'Sofware Engginer',
             img: 'img/riski.jpg',
-            deskripsi: 'Seorang Sofware Engginer dalam semua bidang'
+            deskripsi: 'Menguasai Front-End Dan Back-End yang sudah berpengalaman selama 2 Tahun'
         },
         {
             id: 1,
@@ -19,20 +21,11 @@ function Employee() {
         person.profesi === 'Sofware Engginer'
     );
 
-    const employeeList = programmer.map((person) => (
-        <div className="flex items-center mb-4" key={person.id}>
-            <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover" />
-            <div className="ml-4">
-                <h2 className="font-bold">{person.name}</h2>
-                <p>
-                    <span className="font-bold">{person.profesi}</span>{' '}
-                    {person.deskripsi}
-                </p>
-            </div>
-        </div>
-    ));
 
-    return <div className="container mx-auto">{employeeList}</div>;
+    return <>
+        <Employees programmer={programmer} />
+    </>
+
 
 }
 export default Employee
