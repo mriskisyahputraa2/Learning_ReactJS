@@ -7,23 +7,47 @@ function Employee() {
             name: 'Muhammad Rizki Syahputra',
             profesi: 'Sofware Engginer',
             img: 'img/riski.jpg',
-            deskripsi: 'Menguasai Front-End Dan Back-End yang sudah berpengalaman selama 2 Tahun'
+            deskripsi: 'Seorang yang menguasai Front-End Dan Back-End yang sudah berpengalaman selama 2 Tahun'
         },
         {
             id: 1,
             name: 'Alex',
             profesi: 'FrontEnd Developer',
             img: 'img/gbr1.jpg',
-            deskripsi: 'Seorang FrontEnd Developer dalam semua bidang'
+            deskripsi: 'Seorang FrontEnd Developer yang membuat aplikasi menjadi menarik'
+        },
+        {
+            id: 2,
+            name: 'Abby',
+            profesi: 'UI/UX Developer',
+            img: 'img/gbr2.jpg',
+            deskripsi: 'Seorang UI/UX yang bekerja membuat desain aplikasi'
+        },
+        {
+            id: 3,
+            name: 'Adam',
+            profesi: 'DevOps',
+            img: 'img/gbr3.jpg',
+            deskripsi: 'Seorang DevOps yang merancang sebuah aplikasi supaya aman,cepat, dan ringan '
+        },
+        {
+            id: 4,
+            name: 'Bobby',
+            profesi: 'Cyber Security',
+            img: 'img/gbr4.jpg',
+            deskripsi: 'Seorang yang bekerja mengamankan aplikasi dari sengaran yang berbahaya'
         },
     ]
-    const programmer = people.filter(person =>
-        person.profesi === 'Sofware Engginer'
-    );
+    // menampilkan object array berdasarakan dengan profesi
+    // const programmer = people.filter(person =>
+    //     person.profesi === 'Sofware Engginer'
+    // );
 
 
     return <>
-        <Employees programmer={programmer} />
+        <div className="bg-slate-700">
+            <Employees people={people} />
+        </div>
     </>
 
 

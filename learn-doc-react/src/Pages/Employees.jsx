@@ -1,18 +1,24 @@
-function Employees({ programmer }) {
+import { Fragment } from "react"
+
+function Employees({ people }) {
     return <>
-        <div className="flex flex-col container mx-auto border-2 border-slate-800 w-[900px] h-[200px] my-3 p-2 bg-slate-700 text-white">
-            {programmer.map((person) => {
+
+        <div className="flex flex-col container mx-auto border-2 border-white w-[900px] p-2 bg-slate-700 text-white">
+            {people.map((person, index) => {
                 return (
-                    <div className="flex items-center mb-4" key={person.id}>
-                        <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover" />
-                        <div className="ml-4">
-                            <h2 className="font-bold uppercase">{person.name}</h2>
-                            <p>
-                                <span className="font-bold text-red-500">{person.profesi}</span>{' '}
-                                {person.deskripsi}
-                            </p>
+                    <Fragment key={index}>
+                        <div className="flex items-center my-5">
+                            <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover" />
+                            <div className="ml-4">
+                                <h2 className="font-bold uppercase">{person.name}</h2>
+                                <p>
+                                    <span className="font-bold text-red-500">{person.profesi}</span>{' '}
+                                    {person.deskripsi}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                        <hr />
+                    </Fragment>
                 )
             })}
             <a
