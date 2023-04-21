@@ -12,7 +12,7 @@ function Employees({ people }) {
                             <div className="ml-4">
                                 <h2 className="font-bold uppercase">{person.name}</h2>
                                 <p>
-                                    <span className="font-bold text-red-500">{person.profesi}</span>{' '}
+                                    <span className="font-bold text-red-500">{person.profesi}</span>,{' '}
                                     {person.deskripsi}
                                 </p>
                             </div>
@@ -22,7 +22,7 @@ function Employees({ people }) {
                 )
             })}
             <a
-                className="bg-sky-500 hover:bg-sky-600 p-2 rounded my-6 text-white mx-auto"
+                className="shadow-lg shadow-indigo-500/40 bg-sky-500 py-2 px-5 rounded my-6 text-white mx-auto "
                 href="/">Kembali
             </a>
         </div>

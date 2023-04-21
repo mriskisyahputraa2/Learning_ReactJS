@@ -3,7 +3,7 @@ import ItemLists from "../../Pages/ItemLists"
 function ItemList() {
 
     return <>
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-sky-500 min-h-screen">
             <section className="border-2 border-solid border-black w-[300px] my-4 p-5 rounded mb-4 bg-gray-800 mx-auto">
                 <h1 className="text-2xl font-bold text-center mb-2 text-white">
                     Conditional Rendering

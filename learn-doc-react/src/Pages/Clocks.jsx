@@ -36,8 +36,8 @@ function Clock() {
 
     return (
         <>
-            <b className="text-red-500 text-xl"> {formatTime(currentTime)}</b><br />
-            <b>Hari ini :{formatDate()} </b>
+            <b className="text-xl bg-gradient-to-r from-red-500"> {formatTime(currentTime)}</b><br />
+            <b>Hari ini: {formatDate()} </b>
         </>
     );
 }
