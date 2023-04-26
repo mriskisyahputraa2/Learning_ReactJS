@@ -26,6 +26,10 @@ function Employees({ people }) {
                 className="bg-emerald-500 py-2 px-5 rounded my-6 text-white mx-auto "
                 href="/">Kembali
             </a>
+            <a
+                className="bg-blue-500 py-2 px-5 rounded my-6 text-white mx-auto "
+                href="gallery">Gallerry List
+            </a>
         </div>
     </>
 }

@@ -2,43 +2,38 @@
 
 export const DataGallery = [
     {
-        id: 0,
-        alt: 'riski',
-        name: 'Muhammad Rizki Syahputra',
+        name: 'Rizki',
         profesi: 'Sofware Engginer',
         img: 'img/riski.jpg',
+        alt: 'riski',
         description: 'Seorang yang menguasai Front-End Dan Back-End yang sudah berpengalaman'
     },
     {
-        id: 1,
-        alt: 'riski',
         name: 'Alex',
         profesi: 'FrontEnd Developer',
         img: 'img/gbr1.jpg',
+        alt: 'riski',
         description: 'Seorang FrontEnd Developer yang membuat aplikasi menjadi menarik'
     },
     {
-        id: 2,
-        alt: 'riski',
         name: 'Abby',
         profesi: 'UI/UX Developer',
         img: 'img/gbr2.jpg',
+        alt: 'riski',
         description: 'Seorang UI/UX yang bekerja membuat desain aplikasi'
     },
     {
-        id: 3,
-        alt: 'riski',
         name: 'Adam',
         profesi: 'DevOps',
         img: 'img/gbr3.jpg',
+        alt: 'riski',
         description: 'Seorang DevOps yang merancang sebuah aplikasi supaya aman,cepat, dan ringan '
     },
     {
-        id: 4,
-        alt: 'riski',
         name: 'Bobby',
         profesi: 'Cyber Security',
         img: 'img/gbr4.jpg',
+        alt: 'riski',
         description: 'Seorang yang bekerja mengamankan aplikasi dari sengaran yang berbahaya'
     },
 

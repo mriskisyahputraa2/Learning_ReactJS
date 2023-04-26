@@ -17,7 +17,7 @@ function Coffee() {
             </section>
 
             <div className="flex justify-center mt-4">
-                <a href="/drink-list" className="inline-block bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">Kembali</a>
+                <a href="/" className="inline-block bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">Kembali</a>
             </div>
         </div>
     </>
