@@ -30,7 +30,7 @@ function Gallery() {
                     <p className="text-sky-400"><b className="text-white">Profesi: </b> {dataGalerry.profesi}</p>
 
                     <img
-                        className="w-[170px] h-[170px] rounded-full object-cover my-3"
+                        className="w-[170px] h-[170px] rounded-full object-cover my-3 drop-shadow-xl"
                         src={dataGalerry.img}
                         alt={dataGalerry.alt}
                     />
