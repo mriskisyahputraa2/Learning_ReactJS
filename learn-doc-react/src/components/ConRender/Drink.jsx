@@ -7,7 +7,7 @@ function Drink() {
             <DrinkLists name="Coffee" />
             <a
                 className="bg-blue-500 text-white hover:bg-blue-600 p-2 rounded my-3"
-                href="/">Kembali</a>
+                href="/coffee-list">Coffee</a>
         </div>
     </>
 }
