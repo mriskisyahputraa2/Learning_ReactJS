@@ -1,3 +1,4 @@
+import Gallery from "./Pages/Galerry";
 import NotFound from "./Pages/NotFound";
 import Coffee from "./components/CompPure/Coffee";
 import Drink from "./components/ConRender/Drink";
@@ -17,6 +18,7 @@ function App() {
             <Route path="/drink-list" element={<Drink />} />
             <Route path="/coffee-list" element={<Coffee />} />
             <Route path="/employee" element={<Employee />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

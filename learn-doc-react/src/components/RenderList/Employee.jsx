@@ -7,7 +7,7 @@ function Employee() {
             name: 'Muhammad Rizki Syahputra',
             profesi: 'Sofware Engginer',
             img: 'img/riski.jpg',
-            deskripsi: 'Seorang yang menguasai Front-End Dan Back-End yang sudah berpengalaman selama 2 Tahun'
+            deskripsi: 'Seorang yang menguasai Front-End Dan Back-End yang sudah berpengalaman'
         },
         {
             id: 1,

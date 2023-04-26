@@ -12,9 +12,10 @@ function Employees({ people }) {
                             <div className="ml-4">
                                 <h2 className="font-bold uppercase">{person.name}</h2>
                                 <p>
-                                    <span className="font-bold text-red-500">{person.profesi}</span>,{' '}
+                                    <span className="font-bold font-poppins">{person.profesi}</span>,{' '}
                                     {person.deskripsi}
                                 </p>
+                                <button className="bg-red-900 mt-2 py-1 px-5 rounded">Detail</button>
                             </div>
                         </div>
                         <hr />
@@ -22,7 +23,7 @@ function Employees({ people }) {
                 )
             })}
             <a
-                className="shadow-lg shadow-indigo-500/40 bg-sky-500 py-2 px-5 rounded my-6 text-white mx-auto "
+                className="bg-emerald-500 py-2 px-5 rounded my-6 text-white mx-auto "
                 href="/">Kembali
             </a>
         </div>
