@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { DataGallery } from "../components/AddInteract/DataGalerry";
+import ChatApp from "./ChatApp";
 
 function Gallery() {
     const [index, setIndex] = useState(0); // untuk menentukan index gambar mana yang ditampilkan pada data gallery
@@ -28,7 +29,7 @@ function Gallery() {
 
     return <>
         <div className="bg-teal-600 min-h-screen">
-            <div className="max-w-screen-lg mx-auto px-4 py-8 text-gray-100 font-poppins">
+            <div className="max-w-screen-sm  px-4 py-8 text-gray-100 font-poppins float-right">
                 <div className="border-2 border-white p-4 bg-emerald-500">
                     <h2 className="font-poppins font-bold"><b className="text-white font-mono">Name:</b> {dataGalerry.name}</h2>
                     <p className="font-poppins font-bold"><b className="text-white font-mono">Profesi: </b> {dataGalerry.profesi}</p>
@@ -56,16 +57,17 @@ function Gallery() {
                         </button>
 
                         {/* descripsi data */}
-                        {showMore && <p className="mt-2">{dataGalerry.description}</p>}
+                        {showMore && <p className="mt-2">{dataGalerry.description}</p>} {/* jika showmore false tidak akan menampilkan deskripsi, jika true akan di tampilkan*/}
                     </div>
                 </div>
+                <div className="flex justify-center mt-3 item-center ">
+                    <a
+                        className="bg-blue-500 py-2 px-5 rounded text-white drop-shadow-md"
+                        href="/">Kembali
+                    </a>
+                </div>
             </div>
-            <div className="flex justify-center item-center ">
-                <a
-                    className="bg-blue-500 py-2 px-5 rounded text-white drop-shadow-md"
-                    href="/">Kembali
-                </a>
-            </div>
+            <ChatApp />
         </div>
     </>
 }
