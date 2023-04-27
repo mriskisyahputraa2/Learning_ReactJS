@@ -2,21 +2,25 @@ import { useState } from "react"
 import { DataGallery } from "../components/AddInteract/DataGalerry";
 
 function Gallery() {
-    const [index, setIndex] = useState(0);
-    const [showMore, setShowMore] = useState(false);
-    const hasNext = index < DataGallery.length - 1;
+    const [index, setIndex] = useState(0); // untuk menentukan index gambar mana yang ditampilkan pada data gallery
+    const [showMore, setShowMore] = useState(false); // untuk deskripsi foto yang bernilai false
+    const hasNext = index < DataGallery.length - 1; // untuk menampilkan foto selanjutnya
 
-
+    // fungsi handleNext
     const handleNextClik = () => {
+        // jika hasNext diclick
         if (hasNext) {
+            // maka data index nya ditambah + 1 dan menampilkan data baru 
             setIndex(index + 1);
         } else {
+            // jika data index sudah habis maka kembali ke index 0 
             setIndex(0);
         }
     }
 
-
+    // fungsi handleMore 
     const handleMoreClick = () => {
+        // nilai awal akan false(showDetails), ketika di clik akan true(Hide Details) 
         setShowMore(!showMore);
     }
 
@@ -25,9 +29,9 @@ function Gallery() {
     return <>
         <div className="bg-teal-600 min-h-screen">
             <div className="max-w-screen-lg mx-auto px-4 py-8 text-gray-100 font-poppins">
-                <div className="border-2 border-slate-800 p-4">
-                    <h2 className="text-green-500"><b className="text-white">Name:</b> {dataGalerry.name}</h2>
-                    <p className="text-sky-400"><b className="text-white">Profesi: </b> {dataGalerry.profesi}</p>
+                <div className="border-2 border-white p-4 bg-emerald-500">
+                    <h2 className="font-poppins font-bold"><b className="text-white font-mono">Name:</b> {dataGalerry.name}</h2>
+                    <p className="font-poppins font-bold"><b className="text-white font-mono">Profesi: </b> {dataGalerry.profesi}</p>
 
                     <img
                         className="w-[170px] h-[170px] rounded-full object-cover my-3 drop-shadow-xl"
@@ -37,16 +41,21 @@ function Gallery() {
 
                     <div className="mt-5">
 
+                        {/* button next */}
                         <button
                             onClick={handleNextClik}
                             className="bg-gray-500 py-1 px-6 rounded text-white mr-5"
                         >Next <b>{index + 1}</b>
                         </button>
+
+                        {/* button more */}
                         <button
                             onClick={handleMoreClick}
-                            className="bg-red-500 py-1 px-2 rounded text-white"
-                        >{showMore ? 'Hide' : 'Show'} Details
+                            className="bg-red-500 py-1 px-2 rounded text-white">
+                            {showMore ? 'Hide' : 'Show'} Details {/* showMore bernilai false, jadi awalnya itu akan menampilakn Show Details, tapi ketika di clik akan menampilkan Hide Details*/}
                         </button>
+
+                        {/* descripsi data */}
                         {showMore && <p className="mt-2">{dataGalerry.description}</p>}
                     </div>
                 </div>
